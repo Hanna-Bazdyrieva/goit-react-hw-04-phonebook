@@ -16,7 +16,7 @@ const App = () => {
   }, [contacts]);
 
   const isNameExists = newContact =>
-    contacts.find(contact => contact.name === newContact.name);
+    contacts.find(contact => contact.name.toLowerCase() === newContact.name.toLowerCase());
 
   const isNumberExists = newContact =>
     contacts.find(contact => contact.number === newContact.number);
